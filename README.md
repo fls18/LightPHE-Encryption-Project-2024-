@@ -10,13 +10,13 @@
 완전 동형암호를 이용하기에는 부피가 커, 이번 프로젝트에서는 부분 동형암호인 LightPHE과 지문인식 알고리즘을 결합하고, SAD 알고리즘으로 복호화없이 계산해 보안성이 뛰어난 지문인식 프로그램을 제작했습니다.
 
 ## 코드 
+
 '''
 import cv2
 import numpy as np
 import os
 from lightphe import LightPHE
 
-# 초기화
 cs = LightPHE(algorithm_name="Paillier", key_file="private.txt")
 
 def preprocess_image(image_path):
@@ -76,8 +76,8 @@ def find_best_match(input_image_path, dataset_path):
 
     return best_match, best_similarity
 
-input_image_path = r'D:\data\input_fingerprint\sample_finger.jpg'  # 입력 지문 이미지 경로
-dataset_path = r'D:\data1\dateset_fingerprint'  # 지문 데이터셋 경로
+input_image_path = r'D:\data\input_fingerprint\sample_finger.jpg'  """ 입력 지문 이미지 경로"""
+dataset_path = r'D:\data1\dateset_fingerprint'  """ 지문 데이터셋 경로"""
 
 try:
     best_match, best_similarity = find_best_match(input_image_path, dataset_path)
