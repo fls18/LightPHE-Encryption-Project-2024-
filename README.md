@@ -12,6 +12,11 @@
 ## 코드 
 
 ```
+    import cv2
+    import numpy as np
+    import os
+    from lightphe import LightPHE
+
     cs = LightPHE(algorithm_name="Paillier", key_file="private.txt")
 ```
 Paillier 알고리즘 사용
